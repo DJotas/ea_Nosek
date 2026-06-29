@@ -1,0 +1,5 @@
+﻿year,make,model,vehicleClass,drive,transmission,engineIndex,engineDescriptor,engineCylinders,engineDisplacement,turbocharger,fuelType,cityMpgFt1,highwayMpgFt1,unroundedCityMpgFt1,unroundedHighwayMpgFt1,combinedMpg,annualFuelCostFt1,annualConsumptionInBarrelsFt1,tailpipeCo2InGramsMileFt1
+2021,Toyota,Camry,Sedan,FWD,Automatic,1,2.5L,4,2.5,No,Gasoline,28,39,27.5,38.5,32,1200,14.2,200
+2020,Toyota,Corolla,Sedan,FWD,Automatic,1,1.8L,4,1.8,No,Gasoline,30,40,29.5,39.5,33,1100,13.5,180
+2019,Ford,Fusion,Sedan,AWD,Automatic,1,2.0L,4,2.0,No,Gasoline,22,31,21.5,30.5,26,1250,15.0,210
+2019,Ford,,Sedan,AWD,Automatic,1,2.0L,4,2.0,No,Gasoline,22,31,21.5,30.5,26,1250,15.0,210

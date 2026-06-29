@@ -1,0 +1,114 @@
+### Get all fuelData
+GET http://localhost:8090/fuelData
+
+### Get fuelData by id
+GET http://localhost:8090/fuelData/1
+
+### Get non-existing fuel data by ID
+GET http://localhost:8090/fuelData/99999
+
+### Create new fuel data with valid JSON body
+POST http://localhost:8090/fuelData
+Content-Type: application/json
+
+{
+  "year": 2020,
+  "make": "Toyota",
+  "model": "Camry",
+  "vehicleClass": "Sedan",
+  "drive": "FWD",
+  "transmission": "Automatic",
+  "engineIndex": 1,
+  "engineDescriptor": "2.5L",
+  "engineCylinders": 4,
+  "engineDisplacement": 2.5,
+  "turbocharger": "None",
+  "fuelType": "Gasoline",
+  "cityMpgFt1": 28,
+  "highwayMpgFt1": 39,
+  "unroundedCityMpgFt1": 28.0,
+  "unroundedHighwayMpgFt1": 39.0,
+  "combinedMpg": 32,
+  "annualFuelCostFt1": 1200,
+  "annualConsumptionInBarrelsFt1": 12,
+  "tailpipeCo2InGramsMileFt1": 300
+}
+
+### Create new fuel data with invalid JSON body
+POST http://localhost:8090/fuelData
+Content-Type: application/json
+
+{
+  "year": null,
+  "make": "",
+  "model": "Camry",
+  "vehicleClass": "Sedan"
+}
+
+### Update existing fuel data with valid JSON body
+PUT http://localhost:8090/fuelData/1
+Content-Type: application/json
+
+{
+  "year": 2021,
+  "make": "Honda",
+  "model": "Civic",
+  "vehicleClass": "Sedan",
+  "drive": "FWD",
+  "transmission": "Automatic",
+  "engineIndex": 1,
+  "engineDescriptor": "2.0L",
+  "engineCylinders": 4,
+  "engineDisplacement": 2.0,
+  "turbocharger": "None",
+  "fuelType": "Gasoline",
+  "cityMpgFt1": 30,
+  "highwayMpgFt1": 38,
+  "unroundedCityMpgFt1": 30.0,
+  "unroundedHighwayMpgFt1": 38.0,
+  "combinedMpg": 34,
+  "annualFuelCostFt1": 1100,
+  "annualConsumptionInBarrelsFt1": 11,
+  "tailpipeCo2InGramsMileFt1": 290
+}
+
+### Update non-existing fuel data with valid JSON body
+PUT http://localhost:8090/fuelData/99999
+Content-Type: application/json
+
+{
+  "year": 2021,
+  "make": "Honda",
+  "model": "Civic",
+  "vehicleClass": "Sedan",
+  "drive": "FWD",
+  "transmission": "Automatic",
+  "engineIndex": 1,
+  "engineDescriptor": "2.0L",
+  "engineCylinders": 4,
+  "engineDisplacement": 2.0,
+  "turbocharger": "None",
+  "fuelType": "Gasoline",
+  "cityMpgFt1": 30,
+  "highwayMpgFt1": 38,
+  "unroundedCityMpgFt1": 30.0,
+  "unroundedHighwayMpgFt1": 38.0,
+  "combinedMpg": 34,
+  "annualFuelCostFt1": 1100,
+  "annualConsumptionInBarrelsFt1": 11,
+  "tailpipeCo2InGramsMileFt1": 290
+}
+
+### Update existing fuel data with invalid JSON body
+PUT http://localhost:8090/fuelData/1
+Content-Type: application/json
+
+{
+  "year": null,
+  "make": "",
+  "model": "Civic",
+  "vehicleClass": "Sedan"
+}
+
+### Delete fuel data by ID
+DELETE http://localhost:8090/fuelData/1

@@ -1,0 +1,2 @@
+TRUNCATE TABLE fuel_data CASCADE;
+TRUNCATE TABLE manufacturer CASCADE;

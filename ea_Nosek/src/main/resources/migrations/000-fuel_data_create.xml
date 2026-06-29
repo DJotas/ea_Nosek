@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="1" author="Otakar">
+        <createTable tableName="fuel_data">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="year" type="int"/>
+            <column name="make" type="varchar(255)"/>
+            <column name="model" type="varchar(255)"/>
+            <column name="class" type="varchar(255)"/>
+            <column name="drive" type="varchar(255)"/>
+            <column name="transmission" type="varchar(255)"/>
+            <column name="engine_index" type="int"/>
+            <column name="engine_descriptor" type="varchar(255)"/>
+            <column name="engine_cylinders" type="decimal(10,2)"/>
+            <column name="engine_displacement" type="decimal(10,2)"/>
+            <column name="turbocharger" type="varchar(255)"/>
+            <column name="fuel_type" type="varchar(255)"/>
+            <column name="city_mpg_ft1" type="int"/>
+            <column name="highway_mpg_ft1" type="int"/>
+            <column name="unrounded_city_mpg_ft1" type="decimal(10,2)"/>
+            <column name="unrounded_highway_mpg_ft1" type="decimal(10,2)"/>
+            <column name="combined_mpg" type="int"/>
+            <column name="annual_fuel_cost_ft1" type="decimal(10,2)"/>
+            <column name="annual_consumption_in_barrels_ft1" type="decimal(10,2)"/>
+            <column name="tailpipe_co2_in_grams_mile_ft1" type="decimal(10,2)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

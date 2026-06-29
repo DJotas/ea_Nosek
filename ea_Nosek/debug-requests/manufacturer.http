@@ -1,0 +1,59 @@
+### Get all manufacturers
+GET http://localhost:8090/manufacturers
+
+### Get manufacturer by ID
+GET http://localhost:8090/manufacturers/1
+
+### Get non-existing manufacturer by ID
+GET http://localhost:8090/manufacturers/99999
+
+### Send POST request with valid JSON body
+POST http://localhost:8090/manufacturers
+Content-Type: application/json
+
+{
+  "name": "New Manufacturer",
+  "countryOfOrigin": "Country Name",
+  "yearEstablished": 2000
+}
+
+### Send POST request with invalid data
+POST http://localhost:8090/manufacturers
+Content-Type: application/json
+
+{
+  "name": null,
+  "countryOfOrigin": "Country Name",
+  "yearEstablished": 2000
+}
+
+### Send PUT request with valid JSON body
+PUT http://localhost:8090/manufacturers/3
+Content-Type: application/json
+
+{
+  "name": "Updated Manufacturer",
+  "countryOfOrigin": "Updated Country",
+  "yearEstablished": 2000
+}
+
+### Send PUT request with non-existing ID
+PUT http://localhost:8090/manufacturers/99999
+Content-Type: application/json
+
+{
+  "name": "Updated Manufacturer",
+  "countryOfOrigin": "Updated Country",
+  "yearEstablished": 2000
+}
+
+### Send PUT request with invalid data
+PUT http://localhost:8090/manufacturers/1
+Content-Type: application/json
+
+{
+  "name": null,
+  "countryOfOrigin": "Updated Country"
+}
+
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="1" author="Otakar">
+        <createTable tableName="manufacturer">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(255)"/>
+            <column name="country_of_origin" type="varchar(255)"/>
+            <column name="year_established" type="int"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="Otakar">
+        <addColumn tableName="fuel_data">
+            <column name="manufacturer_id" type="bigint" />
+        </addColumn>
+        <addForeignKeyConstraint baseTableName="fuel_data"
+                                 baseColumnNames="manufacturer_id"
+                                 constraintName="fk_manufacturer"
+                                 referencedTableName="manufacturer"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>
